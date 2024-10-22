@@ -1,0 +1,107 @@
+{
+  "_id": "Plusvalia-Renta-Quito",
+  "startUrl": [
+    "https://www.plusvalia.com/departamentos-en-alquiler-en-quito-pagina-1.html"
+  ],
+  "selectors": [
+    {
+      "id": "pagination",
+      "paginationType": "auto",
+      "parentSelectors": [
+        "_root",
+        "pagination"
+      ],
+      "selector": "a.PageArrow-sc-n5babu-2",
+      "type": "SelectorPagination"
+    },
+    {
+      "id": "element-wrapper",
+      "multiple": true,
+      "parentSelectors": [
+        "pagination"
+      ],
+      "selector": "div.egwEUc",
+      "type": "SelectorElement"
+    },
+    {
+      "id": "url",
+      "linkType": "linkFromHref",
+      "multiple": false,
+      "parentSelectors": [
+        "element-wrapper"
+      ],
+      "selector": "a",
+      "type": "SelectorLink"
+    },
+    {
+      "id": "precio",
+      "multiple": false,
+      "parentSelectors": [
+        "element-wrapper"
+      ],
+      "regex": "(\\d[\\d\\.]*)",
+      "selector": "div.Price-sc-12dh9kl-3",
+      "type": "SelectorText"
+    },
+    {
+      "id": "tamaño_m²",
+      "multiple": false,
+      "parentSelectors": [
+        "element-wrapper"
+      ],
+      "regex": "(\\d[\\d\\.]*)",
+      "selector": ".PostingMainFeaturesBlock-sc-1uhtbxc-0 span:nth-of-type(1)",
+      "type": "SelectorText"
+    },
+    {
+      "id": "habitaciones",
+      "multiple": false,
+      "parentSelectors": [
+        "element-wrapper"
+      ],
+      "regex": "(\\d+)",
+      "selector": "span:nth-of-type(2)",
+      "type": "SelectorText"
+    },
+    {
+      "id": "baños",
+      "multiple": false,
+      "parentSelectors": [
+        "element-wrapper"
+      ],
+      "regex": "(\\d+)",
+      "selector": "span:nth-of-type(3)",
+      "type": "SelectorText"
+    },
+    {
+      "id": "estacionamiento",
+      "multiple": false,
+      "parentSelectors": [
+        "element-wrapper"
+      ],
+      "regex": "(\\d+)",
+      "selector": "span:nth-of-type(4)",
+      "type": "SelectorText"
+    },
+    {
+      "id": "ubicacion",
+      "multiple": false,
+      "parentSelectors": [
+        "element-wrapper"
+      ],
+      "regex": "",
+      "selector": "div.PostingCardRow-sc-i1odl-5.gJKAik > div > h2",
+      "type": "SelectorText"
+    },
+    {
+      "extractAttribute": "src",
+      "id": "imgURL",
+      "multiple": false,
+      "parentSelectors": [
+        "element-wrapper"
+      ],
+      "selector": "img",
+      "type": "SelectorElementAttribute"
+    }
+  ]
+}
